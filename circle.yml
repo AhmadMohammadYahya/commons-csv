@@ -1,7 +1,7 @@
 test:
  pre:
-   - mkdir Java
-   - mkdir Java/skife.org/
+   - mkdir /home/ubuntu/Java
+   - mkdir /home/ubuntu/Java/skife.org/
    - wget -O /home/ubuntu/Java/skife.org/csv-1.0.jar "http://kasparov.skife.org/csv/csv-1.0.jar"
    - mvn install:install-file -X -Dfile=/home/ubuntu/Java/skife.org/csv-1.0.jar -DgroupId=org.skife.kasparov -DartifactId=csv -Dversion=1.0 -Dpackaging=jar
  post:
