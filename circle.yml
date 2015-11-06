@@ -1,7 +1,7 @@
 test:
  pre:
-   - wget -O /home/ubuntu/commons-csv/Java/skife.org/csv-1.0.jar "http://kasparov.skife.org/csv/csv-1.0.jar"
-   - mvn install:install-file -X -Dfile=/home/ubuntu/commons-csv/Java/skife.org/csv-1.0.jar -DgroupId=org.skife.kasparov -DartifactId=csv -Dversion=1.0 -Dpackaging=jar
+   - wget -O /home/ubuntu/Java/skife.org/csv-1.0.jar "http://kasparov.skife.org/csv/csv-1.0.jar"
+   - mvn install:install-file -X -Dfile=/home/ubuntu/Java/skife.org/csv-1.0.jar -DgroupId=org.skife.kasparov -DartifactId=csv -Dversion=1.0 -Dpackaging=jar
  post:
    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
